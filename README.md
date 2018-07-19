@@ -1,5 +1,5 @@
 ## Keyword-Extractor
-Keyword extraction is tasked with the automatic identification of terms that best describe the subject of a document([More on Wikipedia](https://en.wikipedia.org/wiki/Keyword_extraction)).
+Keyword extraction is tasked with the automatic identification of terms that best describe the subject of a document ([More on Wikipedia](https://en.wikipedia.org/wiki/Keyword_extraction)).
 
 ### Requirements
   - [PyPDF2](https://github.com/mstamy2/PyPDF2) - A utility to read and write PDF files in Python `pip3 install PyPDF2`
