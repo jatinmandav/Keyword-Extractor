@@ -27,9 +27,3 @@ optional arguments:
 --pdf_file PDF_FILE    If a PDF File, the path to that file
 --text_file TEXT_FILE  If a TEXT file, the patht to that file
 --save_to SAVE_TO      Path to CSV in to write/store Generated Keywords | Deafult: keywords.csv```
-
-
-
-
-
-
