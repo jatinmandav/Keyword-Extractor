@@ -16,13 +16,20 @@ Keyword extraction is tasked with the automatic identification of terms that bes
  
  `cd Keyword-Extractory`
  
- - See Help
+ - $ python3 extract_keywords.py --help
+ 
 ```$ python3 extract_keywords.py --help
+
 usage: extract_keywords.py [-h] [--pdf_file PDF_FILE] [--text_file TEXT_FILE] [--save_to SAVE_TO]
+
 optional arguments:
 -h, --help             show this help message and exit
 --pdf_file PDF_FILE    If a PDF File, the path to that file
 --text_file TEXT_FILE  If a TEXT file, the patht to that file
 --save_to SAVE_TO      Path to CSV in to write/store Generated Keywords | Deafult: keywords.csv```
+
+
+
+
 
 
