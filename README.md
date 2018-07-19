@@ -30,19 +30,19 @@ optional arguments:
 ```
 
 ## Algorithm
-  - [**Read PDF or TEXT file**](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L56). (For PDF files, each page is treated as a single document which helps in weighting the keywords)
+  - [Read PDF or TEXT file](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L56). (For PDF files, each page is treated as a single document which helps in weighting the keywords)
   
-  - **Tokenization**: The text is then tokenized using `RegexpTokenizer` from `nltk.tokenize`, allowing only Alphabets, [A-Z] and [a-z] thus also removing puncutations from the text.
+  - [Tokenization](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L69): The text is then tokenized using `RegexpTokenizer` from `nltk.tokenize`, allowing only Alphabets, [A-Z] and [a-z] thus also removing puncutations from the text.
   
-  - **Part-of-Speech Tagging**: The tokenized text is then tagged using `pos_tag` from `nltk.tag`. After tagging the complete text, only the Proper Nouns (singular(NNP) and plural(NNPS)) are collected.
+  - [Part-of-Speech Tagging](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L73): The tokenized text is then tagged using `pos_tag` from `nltk.tag`. After tagging the complete text, only the Proper Nouns (singular(NNP) and plural(NNPS)) are collected.
   
-  - **Removing Stopwords**: Next the stopwords from `nltk.corpus` are removed from the text as they do not really contriute towards explaining the document.
+  - [Removing Stopwords](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L80): Next the stopwords from `nltk.corpus` are removed from the text as they do not really contriute towards explaining the document.
   
-  - **Lemmatizing**: The words are them lemmatized using `WordNetLemmatizer` from `nltk.stem` thus only storing the root words.
+  - [Lemmatizing](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L84): The words are them lemmatized using `WordNetLemmatizer` from `nltk.stem` thus only storing the root words.
   
-  - **Raw Count**: Using `Counter()` from `collections`, the raw count of each word in calculated.
+  - [Raw Count](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L93): Using `Counter()` from `collections`, the raw count of each word in calculated.
   
-  - **Calculating [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) scores**: 
+  - [Calculating TF-IDF scores](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L41): 
     - TF Value: Augmented Frequency, to prevent a bias towards longer documents, e.g. raw frequency divided by the raw frequency of the most occurring term in the document
       
       - `tf = 0.5 + 0.5*(raw_count/max_row_count_in_document)`
@@ -51,7 +51,7 @@ optional arguments:
     
       - `idf = log(no_documents/(1 + no_documents_in_which_word_occured))`
       
-    - TF-IDF Value: tf*idf
+    - [TF-IDF Value](https://en.wikipedia.org/wiki/Tf%E2%80%93idf): tf*idf
     
-  - **Sorting and Storing the data with respect to tf-idf scores.**
+  - [Sorting and Storing the data with respect to tf-idf scores](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L116).
     
