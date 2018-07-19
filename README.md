@@ -30,7 +30,7 @@ optional arguments:
 ```
 
 ## Algorithm
-  - **Read PDF or TEXT file**. (For PDF files, each page is treated as a single document which helps in weighting the keywords)
+  - [**Read PDF or TEXT file**](https://github.com/jatinmandav/Keyword-Extractor/blob/13904fb8f01ee6ff493f7d19f32e1d6a0fa962ab/extract_keywords.py#L56). (For PDF files, each page is treated as a single document which helps in weighting the keywords)
   
   - **Tokenization**: The text is then tokenized using `RegexpTokenizer` from `nltk.tokenize`, allowing only Alphabets, [A-Z] and [a-z] thus also removing puncutations from the text.
   
