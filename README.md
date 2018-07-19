@@ -29,20 +29,20 @@ optional arguments:
 --save_to SAVE_TO      Path to CSV in to write/store Generated Keywords | Deafult: keywords.csv
 ```
 
-### Algorithm
-  - Read PDF or TEXT file. (For PDF files, each page is treated as a single document which helps in weighting the keywords)
+## Algorithm
+  - **Read PDF or TEXT file**. (For PDF files, each page is treated as a single document which helps in weighting the keywords)
   
-  - Tokenization: The text is then tokenized using `RegexpTokenizer` from `nltk.tokenize`, allowing only Alphabets, [A-Z] and [a-z] thus also removing puncutations from the text.
+  - **Tokenization**: The text is then tokenized using `RegexpTokenizer` from `nltk.tokenize`, allowing only Alphabets, [A-Z] and [a-z] thus also removing puncutations from the text.
   
-  - Part-of-Speech Tagging: The tokenized text is then tagged using `pos_tag` from `nltk.tag`. After tagging the complete text, only the Proper Nouns (singular(NNP) and plural(NNPS)) are collected.
+  - **Part-of-Speech Tagging**: The tokenized text is then tagged using `pos_tag` from `nltk.tag`. After tagging the complete text, only the Proper Nouns (singular(NNP) and plural(NNPS)) are collected.
   
-  - Removing Stopwords: Next the stopwords from `nltk.corpus` are removed from the text as they do not really contriute towards explaining the document.
+  - **Removing Stopwords**: Next the stopwords from `nltk.corpus` are removed from the text as they do not really contriute towards explaining the document.
   
-  - Lemmatizing: The words are them lemmatized using `WordNetLemmatizer` from `nltk.stem` thus only storing the root words.
+  - **Lemmatizing**: The words are them lemmatized using `WordNetLemmatizer` from `nltk.stem` thus only storing the root words.
   
-  - Raw Count: Using `Counter()` from `collections`, the raw count of each word in calculated.
+  - **Raw Count**: Using `Counter()` from `collections`, the raw count of each word in calculated.
   
-  - Calculating [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) scores: 
+  - **Calculating [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) scores**: 
     - TF Value: Augmented Frequency, to prevent a bias towards longer documents, e.g. raw frequency divided by the raw frequency of the most occurring term in the document
       
       - `tf = 0.5 + 0.5*(raw_count/max_row_count_in_document)`
@@ -53,5 +53,5 @@ optional arguments:
       
     - TF-IDF Value: tf*idf
     
-  - Sorting and Storing the data with respect to tf-idf scores.
+  - **Sorting and Storing the data with respect to tf-idf scores.**
     
