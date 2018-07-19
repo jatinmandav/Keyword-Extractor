@@ -53,3 +53,5 @@ optional arguments:
       
     - TF-IDF Value: tf*idf
     
+  - Sorting and Storing the data with respect to tf-idf scores.
+    
