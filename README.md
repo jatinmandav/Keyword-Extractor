@@ -45,11 +45,11 @@ optional arguments:
   - Calculating [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) scores: 
     - TF Value: Augmented Frequency, to prevent a bias towards longer documents, e.g. raw frequency divided by the raw frequency of the most occurring term in the document
       
-      - tf = 0.5 + 0.5*(raw_count/max_row_count_in_document)
+      - `tf = 0.5 + 0.5*(raw_count/max_row_count_in_document)`
     
     - IDF Value: Logarithmically scaled inverse fraction of the documents that contain the word, obtained by dividing the total number of documents by the number of documents containing the term, and then taking the logarithm of that quotient.
     
-      - idf = log(no_documents/(1 + no_documents_in_which_word_occured))
+      - `idf = log(no_documents/(1 + no_documents_in_which_word_occured))`
       
     - TF-IDF Value: tf*idf
     
